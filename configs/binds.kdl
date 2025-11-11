@@ -1,28 +1,28 @@
 binds {
-    ### General Hotkeys ###
+    // ### General Hotkeys ###
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
     Mod+Shift+Return { spawn-sh "rofi -show drun"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+E { spawn "thunar"; }
 
-    ### Screen Lock ###
+    // ### Screen Lock ###
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
-    ### Accessibility ###
+    // ### Accessibility ###
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    ### Audio Controls ###
+    // ### Audio Controls ###
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    ### Brightness Control ###
+    // ### Brightness Control ###
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    ### Workspace Navigation ###
+    // ### Workspace Navigation ###
     Mod+Down      { focus-workspace-down; }
     Mod+Up        { focus-workspace-up; }
     Mod+U         { focus-workspace-down; }
@@ -42,7 +42,7 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    ### Window Management ###
+    // ### Window Management ###
     Mod+Q repeat=false { close-window; }
     Mod+O repeat=false { toggle-overview; }
     Mod+A repeat=false { toggle-overview; }
@@ -72,7 +72,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    ### Specific Workspaces ###
+    // ### Specific Workspaces ###
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -92,7 +92,7 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
-    ### Column and Window Adjustments ###
+    // ### Column and Window Adjustments ###
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Comma  { consume-window-into-column; }
@@ -114,12 +114,12 @@ binds {
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
     Mod+G { toggle-column-tabbed-display; }
 
-    ### Screenshots ###
+    // ### Screenshots ###
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    ### Miscellaneous ###
+    // ### Miscellaneous ###
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Ctrl+Alt+Delete { quit; }
     Ctrl+Shift+P { power-off-monitors; }
