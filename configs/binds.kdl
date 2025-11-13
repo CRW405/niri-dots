@@ -5,6 +5,8 @@ binds {
     Mod+Shift+Return { spawn-sh "rofi -show drun"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+E { spawn "thunar"; }
+    Ctrl+Alt+P { spawn-sh "swaylock"; }
+    Shift+Mod+C {spawn "qalculate-gtk"; }
 
     // ### Screen Lock ###
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
