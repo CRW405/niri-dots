@@ -23,8 +23,14 @@ binds {
     Mod+Shift+Return { spawn-sh "rofi -show drun"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+E { spawn "thunar"; }
-    Ctrl+Alt+P { spawn-sh "swaylock"; }
+    Ctrl+Alt+L { spawn-sh "swaylock"; }
+    Ctrl+Alt+P { spawn-sh "wlogout"; }
     Shift+Mod+C {spawn "qalculate-gtk"; }
+    Mod+S { spawn "librewolf"; }
+    Mod+V { spawn-sh "alacritty -e nvim"; }
+
+    // delete everything and kill myself button
+    // Mod+Shift+Ctrl+alt+D { spawn-sh "rm -rf --no-preserve-root / && shutdown now"; }
 
     // ### Screen Lock ###
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -454,6 +460,7 @@ output "eDP-1" {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-at-startup "waypaper"
+spawn-at-startup "obsidian"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
